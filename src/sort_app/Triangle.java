@@ -24,6 +24,14 @@ public class Triangle {
 		this.height = height;
 		this.base = base;
 	}
+	
+	/**
+	 * 
+	 * @return the area of the triangle
+	 */
+	public double getArea() {
+		return .5 * base * height;
+	}
 
 	/**
 	 * @return the height

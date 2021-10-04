@@ -24,6 +24,10 @@ public class Rectangle {
 		this.wid = w;
 		this.len = l;
 	}
+	
+	public double getArea() {
+		return this.wid * this.len;
+	}
 
 	/**
 	 * @return the len
