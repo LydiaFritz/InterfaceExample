@@ -17,6 +17,7 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 		ArrayList<Rectangle> lst1 = new ArrayList<Rectangle>();
+		ArrayList<Triangle> lst2 = new ArrayList<Triangle>();
 		Random r = new Random();
 		
 		for(int i = 0; i < 10; i++) {
