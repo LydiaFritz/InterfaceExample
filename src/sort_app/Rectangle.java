@@ -7,7 +7,7 @@ package sort_app;
  * @author Lydia
  *
  */
-public class Rectangle {
+public class Rectangle implements ShapeUtility {
 
 	private double len, wid;
 	

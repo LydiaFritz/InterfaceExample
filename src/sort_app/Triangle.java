@@ -7,7 +7,7 @@ package sort_app;
  * @author Lydia
  *
  */
-public class Triangle {
+public class Triangle implements ShapeUtility{
 
 	private double height, base;
 	
