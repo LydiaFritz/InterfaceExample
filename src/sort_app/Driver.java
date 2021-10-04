@@ -26,9 +26,15 @@ public class Driver {
 			
 			Rectangle newRectangle = new Rectangle(wid, len);
 			lst1.add(newRectangle);
+			Triangle t = new Triangle(r.nextDouble()*10, r.nextDouble()*10);
+			lst2.add(t);
 		}
 		
 		for(Rectangle o : lst1) {
+			System.out.println(o);
+		}
+		
+		for(Triangle o : lst2) {
 			System.out.println(o);
 		}
 		

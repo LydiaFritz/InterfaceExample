@@ -70,11 +70,10 @@ public class Rectangle {
 		if (!(obj instanceof Rectangle))
 			return false;
 		Rectangle other = (Rectangle) obj;
-		if (Double.doubleToLongBits(len) != Double.doubleToLongBits(other.len))
-			return false;
-		if (Double.doubleToLongBits(wid) != Double.doubleToLongBits(other.wid))
-			return false;
-		return true;
+		//return true if area is equal
+		if(other.equals(this))
+			return true;
+		else return false;
 	}
 
 }

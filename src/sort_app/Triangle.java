@@ -63,8 +63,8 @@ public class Triangle {
 
 	@Override
 	public String toString() {
-		String str = String.format("[height = %4.2f, base = %4.2f]", height, base);
-		return "Triangle [height=" + height + ", base=" + base + "]";
+		String str = String.format("Triangle [height = %4.2f, base = %4.2f]", height, base);
+		return str;
 	}
 
 
@@ -75,11 +75,10 @@ public class Triangle {
 		if (!(obj instanceof Triangle))
 			return false;
 		Triangle other = (Triangle) obj;
-		if (Double.doubleToLongBits(base) != Double.doubleToLongBits(other.base))
-			return false;
-		if (Double.doubleToLongBits(height) != Double.doubleToLongBits(other.height))
-			return false;
-		return true;
+		//change to compare area
+		if(this.getArea() == other.getArea())
+			return true;
+		else return false;
 	}
 	
 	
