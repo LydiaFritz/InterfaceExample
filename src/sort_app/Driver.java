@@ -18,52 +18,34 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 		
-		//make an array list of strings
-		ArrayList<String> myLst = new ArrayList<String>();
-		String str = "Jerimiah Winsted is inviting you to a scheduled zoom meeting";
-		String [] myArr = str.split(" "); 
-		ArrayList<String> strLst = new ArrayList<String>();
+			
+
+		ArrayList<ShapeUtility> lst1 = new ArrayList<ShapeUtility>();
+		Random r = new Random();
 		
-		//put some strings in the list
-		System.out.println("\n\nORIGINAL LIST");
-		for(String s : myArr) {
-			//prints list in original order
-			System.out.print(s.toLowerCase() + " ");
-			//add lower-case string to strLst
-			strLst.add(s.toLowerCase());
+		for(int i = 0; i < 10; i++) {
+			//add some Rectangles and Triangles to the list
+			double d1 = r.nextDouble()*10;
+			double d2 = r.nextDouble()*15;	
+			
+			Rectangle newRectangle = new Rectangle(d1, d2);
+			lst1.add(newRectangle);
+			Triangle t = new Triangle(d1*10, d2*10);
+			lst1.add(t);
 		}
 		
-		//use Java collections sort functions
-		Collections.sort(strLst);
+		for(ShapeUtility o : lst1) {
+			//print the shapes
+			System.out.println(o);
+		}
 		
-		//print sorted list
-		System.out.println("\n\nSORTED LIST");
-		for(String s : strLst)
-			System.out.print(s + " ");
+		//sort the shapes
+		Collections.sort(lst1);
 		
+		//print the shapes
+		for(ShapeUtility o : lst1)
+			System.out.println(o.getArea());
 		
-		
-		
-		
-
-//		ArrayList<ShapeUtility> lst1 = new ArrayList<ShapeUtility>();
-//		Random r = new Random();
-//		
-//		for(int i = 0; i < 10; i++) {
-//			double d1 = r.nextDouble()*10;
-//			double d2 = r.nextDouble()*15;			
-//			Rectangle newRectangle = new Rectangle(d1, d2);
-//			lst1.add(newRectangle);
-//			Triangle t = new Triangle(d1*10, d2*10);
-//			lst1.add(t);
-//		}
-//		
-//		for(ShapeUtility o : lst1) {
-//			//getArea is guaranteed to exist for 
-//			//any object implement the ShapeUtility interface
-//			System.out.println(o.getArea());
-//		}
-//		
 		
 		
 
