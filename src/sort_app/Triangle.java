@@ -7,7 +7,7 @@ package sort_app;
  * @author Lydia
  *
  */
-public class Triangle implements ShapeUtility{
+public class Triangle implements ShapeUtility, Comparable<Object>{
 
 	private double height, base;
 	
@@ -75,10 +75,35 @@ public class Triangle implements ShapeUtility{
 		if (!(obj instanceof Triangle))
 			return false;
 		Triangle other = (Triangle) obj;
-		//change to compare area
-		if(this.getArea() == other.getArea())
+		//compare area to three decimal places
+		int intArea = (int)Math.ceil((other.getArea() + .5)*1000);
+		int thisArea = (int)Math.ceil((this.getArea() + .5)*1000);
+		if(thisArea == intArea)
 			return true;
 		else return false;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Triangle t; Rectangle r;
+		double area = this.getArea();
+		double o_area = -1;
+		//see if o is this object
+		if(o == this)return 0;
+		//see if o is a Triangle or Rectangle		
+		else if(o instanceof Triangle) {
+			t = (Triangle)o;
+			o_area = t.getArea();
+		}
+		else if(o instanceof Rectangle) {
+			r = (Rectangle)o;
+			o_area = r.getArea();
+		}
+		if(area > o_area)
+			return 1;
+		else if(area < o_area)
+			return -1;
+		return 0;
 	}
 	
 	
