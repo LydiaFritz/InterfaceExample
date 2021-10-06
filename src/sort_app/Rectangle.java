@@ -79,7 +79,7 @@ public class Rectangle implements ShapeUtility {
 	}
 
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(ShapeUtility o) {
 		
 		Triangle t; Rectangle r;
 		double area = this.getArea();

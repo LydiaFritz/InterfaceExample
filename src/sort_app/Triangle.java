@@ -76,15 +76,15 @@ public class Triangle implements ShapeUtility{
 			return false;
 		Triangle other = (Triangle) obj;
 		//compare area to three decimal places
-		int intArea = (int)Math.ceil((other.getArea() + .5)*1000);
-		int thisArea = (int)Math.ceil((this.getArea() + .5)*1000);
+		int intArea = (int)Math.ceil((other.getArea() * 1000) + 0.5);
+		int thisArea = (int)Math.ceil((this.getArea() * 1000) + 0.5);
 		if(thisArea == intArea)
 			return true;
 		else return false;
 	}
 
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(ShapeUtility o) {
 		Triangle t; Rectangle r;
 		double area = this.getArea();
 		double o_area = -1;

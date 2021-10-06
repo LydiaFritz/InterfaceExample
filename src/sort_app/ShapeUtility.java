@@ -7,7 +7,7 @@ package sort_app;
  * @author Lydia
  *
  */
-public interface ShapeUtility extends Comparable<Object>{
+public interface ShapeUtility extends Comparable<ShapeUtility>{
 
 	public double getArea();
 }
